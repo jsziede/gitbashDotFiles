@@ -29,6 +29,7 @@ export PURPLE='\e[0;35m'
 export CYAN='\e[0;36m'
 export WHITE='\e[0;37m'
 
+
 # Format for git_prompt_status()
 BASH_THEME_GIT_PROMPT_UNMERGED=" $RED unmerged"
 BASH_THEME_GIT_PROMPT_DELETED=" $RED deleted"
@@ -43,7 +44,7 @@ BASH_THEME_GIT_PROMPT_DIRTY="$BRED (*)$RESET_COLOR"
 BASH_THEME_GIT_PROMPT_CLEAN=""
 
 # Colors vary depending on time lapsed.
-BASH_THEME_GIT_TIME_SINCE_COMMIT_SHORT="$BGREEN"
+BASH_THEME_GIT_TIME_SINCE_COMMIT_SHORT="$GREEN"
 BASH_THEME_GIT_TIME_SHORT_COMMIT_MEDIUM="$BYELLOW"
 BASH_THEME_GIT_TIME_SINCE_COMMIT_LONG="$BRED"
 BASH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL="$CYAN"
@@ -155,4 +156,4 @@ git_custom_status () {
   fi
 }
 
-PS1="\[$BPURPLE\]\u \[$RESET_COLOR\]at \[$BYELLOW\]\h \[$RESET_COLOR\]in \[$BCYAN\]\w"'`git_custom_status`'" \n\[$CYAN\]> \[$RESET_COLOR\]"
+PS1="\[$PURPLE\]\u \[$RESET_COLOR\]at \[$YELLOW\]\h \[$RESET_COLOR\]in \[$BBLUE\]\w"'`git_custom_status`'" \n\[$CYAN\]> \[$RESET_COLOR\]"
