@@ -1,5 +1,5 @@
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+#Bash profile to change the default terminal prompt and add some git information.
+#David Barnes
 
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
@@ -19,8 +19,6 @@ export BLUE='\e[1;34m'
 export PURPLE='\e[1;35m'
 export CYAN='\e[1;36m'
 export WHITE='\e[0;37m'
-
-export BLUE='\e[0;36m'
 
 # Format for git_prompt_status()
 BASH_THEME_GIT_PROMPT_UNMERGED=" $RED unmerged"
@@ -149,4 +147,4 @@ git_custom_status () {
   fi
 }
 
-PS1="\[$PURPLE\]\u \[$RESET_COLOR\]at \[$YELLOW\]\h \[$RESET_COLOR\]in \[$CYAN\]\w\$(git_custom_status) \n\[$BLUE\]> \[$RESET_COLOR\]"
+PS1="\[$PURPLE\]\u \[$RESET_COLOR\]at \[$YELLOW\]\h \[$RESET_COLOR\]in \[$CYAN\]\w"'\$(git_custom_status)'" \n\[$BLUE\]> \[$RESET_COLOR\]"
