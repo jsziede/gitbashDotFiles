@@ -11,13 +11,22 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 
 # Color shortcuts
 export RESET_COLOR='\e[0m' # No Color
+export BBLACK='\e[0;30m'
+export BRED='\e[1;31m'
+export BGREEN='\e[1;32m'
+export BYELLOW='\e[1;33m'
+export BBLUE='\e[1;34m'
+export BPURPLE='\e[1;35m'
+export BCYAN='\e[1;36m'
+export BWHITE='\e[0;37m'
+
 export BLACK='\e[0;30m'
-export RED='\e[1;31m'
-export GREEN='\e[1;32m'
-export YELLOW='\e[1;33m'
-export BLUE='\e[1;34m'
-export PURPLE='\e[1;35m'
-export CYAN='\e[1;36m'
+export RED='\e[0;31m'
+export GREEN='\e[0;32m'
+export YELLOW='\e[0;33m'
+export BLUE='\e[0;34m'
+export PURPLE='\e[0;35m'
+export CYAN='\e[0;36m'
 export WHITE='\e[0;37m'
 
 # Format for git_prompt_status()
@@ -28,20 +37,19 @@ BASH_THEME_GIT_PROMPT_MODIFIED=" $YELLOW modified"
 BASH_THEME_GIT_PROMPT_ADDED=" $GREEN added"
 BASH_THEME_GIT_PROMPT_UNTRACKED=" $WHITE untracked"
 
-BASH_THEME_GIT_PROMPT_PREFIX="$RESET_COLOR $BLUE"
+BASH_THEME_GIT_PROMPT_PREFIX="$RESET_COLOR $CYAN"
 BASH_THEME_GIT_PROMPT_SUFFIX="$RESET_COLOR"
-BASH_THEME_GIT_PROMPT_DIRTY="$RED (*)$RESET_COLOR"
+BASH_THEME_GIT_PROMPT_DIRTY="$BRED (*)$RESET_COLOR"
 BASH_THEME_GIT_PROMPT_CLEAN=""
 
 # Colors vary depending on time lapsed.
-BASH_THEME_GIT_TIME_SINCE_COMMIT_SHORT="$GREEN"
-BASH_THEME_GIT_TIME_SHORT_COMMIT_MEDIUM="$YELLOW"
-BASH_THEME_GIT_TIME_SINCE_COMMIT_LONG="$RED"
-BASH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL="$BLUE"
+BASH_THEME_GIT_TIME_SINCE_COMMIT_SHORT="$BGREEN"
+BASH_THEME_GIT_TIME_SHORT_COMMIT_MEDIUM="$BYELLOW"
+BASH_THEME_GIT_TIME_SINCE_COMMIT_LONG="$BRED"
+BASH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL="$CYAN"
 
 # Format for git_prompt_ahead()
-#BASH_THEME_GIT_PROMPT_AHEAD=" ${WHITE}(⚡)"
-BASH_THEME_GIT_PROMPT_AHEAD=" ${WHITE}(↑)"
+BASH_THEME_GIT_PROMPT_AHEAD=" ${BWHITE}(${BYELLOW}↑${BWHITE})"
 
 # Format for git_prompt_long_sha() and git_prompt_short_sha()
 BASH_THEME_GIT_PROMPT_SHA_BEFORE="$YELLOW::$BLUE"
@@ -147,4 +155,4 @@ git_custom_status () {
   fi
 }
 
-PS1="\[$PURPLE\]\u \[$RESET_COLOR\]at \[$YELLOW\]\h \[$RESET_COLOR\]in \[$CYAN\]\w"'`git_custom_status`'" \n\[$BLUE\]> \[$RESET_COLOR\]"
+PS1="\[$BPURPLE\]\u \[$RESET_COLOR\]at \[$BYELLOW\]\h \[$RESET_COLOR\]in \[$BCYAN\]\w"'`git_custom_status`'" \n\[$CYAN\]> \[$RESET_COLOR\]"
