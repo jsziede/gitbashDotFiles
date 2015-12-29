@@ -108,14 +108,14 @@ fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-alias gaa git add -A
-alias gci git commit
-alias gst git status
-alias gb git branch
-alias gco git checkout
-alias gcob git checkout -b
-alias gm git merge
-alias gp git push
-alias gpl git pull
-alias gf git fetch
+alias gaa='git add -A'
+alias gci='git commit'
+alias gst='git status'
+alias gb='git branch'
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias gm='git merge'
+alias gp='git push'
+alias gpl='git pull'
+alias gf='git fetch'
 
