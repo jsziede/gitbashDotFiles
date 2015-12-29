@@ -147,4 +147,4 @@ git_custom_status () {
   fi
 }
 
-PS1="\[$PURPLE\]\u \[$RESET_COLOR\]at \[$YELLOW\]\h \[$RESET_COLOR\]in \[$CYAN\]\w"'\$(git_custom_status)'" \n\[$BLUE\]> \[$RESET_COLOR\]"
+PS1="\[$PURPLE\]\u \[$RESET_COLOR\]at \[$YELLOW\]\h \[$RESET_COLOR\]in \[$CYAN\]\w"'`git_custom_status`'" \n\[$BLUE\]> \[$RESET_COLOR\]"
