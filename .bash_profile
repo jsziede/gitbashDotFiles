@@ -1,4 +1,4 @@
-#Bash profile to change the default terminal prompt and add some git information.
+﻿#Bash profile to change the default terminal prompt and add some git information.
 #David Barnes
 
 if [ -f ~/.bashrc ]; then
@@ -156,4 +156,4 @@ git_custom_status () {
   fi
 }
 
-PS1="\[$PURPLE\]\u \[$RESET_COLOR\]at \[$YELLOW\]\h \[$RESET_COLOR\]in \[$BBLUE\]\w"'`git_custom_status`'" \n\[$CYAN\]> \[$RESET_COLOR\]"
+PS1="\[$GREEN\]\u \[$RESET_COLOR\]at \[$YELLOW\]\h \[$RESET_COLOR\]in \[$BBLUE\]\w"'`git_custom_status`'" \n\[$CYAN\]> \[$RESET_COLOR\]"
